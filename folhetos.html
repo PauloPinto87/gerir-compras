@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerir Compras</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body onload="formChange()">
+    <header>
+        <h1>Folhetos</h1>
+    </header>
+    <main>
+        <section class="all-inputs-container">
+            <form action="" onchange="formChange()">
+                <div class="input-market-container">
+                    <p>Validade da promoção</p>
+                    <label for="dateStart">Início promoção:</label>
+                    <input type="date" name="" id="dateStart" required>
+
+                    <label for="dateEnd">Fim promoção:</label>
+                    <input type="date" name="" id="dateEnd"required>
+                </div>
+                <div class="input-market-container">
+                    <label for="inputMarketName">Nome do Mercado</label>
+                    <select name="" id="selectMarket">
+                        <option value="Aldi">Aldi</option>
+                        <option value="Lidl">Lidl</option>
+                        <option value="MiniPreço">MiniPreço</option>
+                        <option value="PingoDoce">PingoDoce</option>
+                    </select>
+                </div>
+                <div class="input-market-container">
+                    <label for="inputProductName">Nome do Produto</label>
+                    <input type="text" name="" id="inputProductName">
+                </div>
+                <div class="input-market-container">
+                    <label for="inputMetricUnit">Unidade de medida</label>
+                    <select name="" id="selectUnit">
+                        <option value="Dose">Dose</option>
+                        <option value="Dúzia">Dúzia(L)</option>
+                        <option value="Peso(kg)">Peso(kg)</option>
+                        <option value="Volume(L)">Volume(L)</option>
+                        <option value="Unitário">Unitário</option>
+                        
+                    </select>
+                </div>
+                <div class="input-market-container">
+                    <div >
+                        <label for="inputPack">É vendido em pack</label>
+                        <input type="radio" name="agrupamento" id="inputPack">
+                    </div>
+                    <div id="qntPackContainer" class="hide input-market-container">
+                        <label for="inputQntPack">Quantos produtos há no pack?</label>
+                        <input type="number" name="" id="inputQntPack">
+                    </div>
+
+                    <div class="input-market-container">
+                        <label for="inputIndividual">É vendido individualmente</label>
+                        <input type="radio" name="agrupamento" id="inputIndividual">
+                    </div>
+                    <div id="unidDeMedidadeInd" class="input-market-container">
+                        <label for="inputProductWeight">"Peso"" por item ou unidades/doses?</label>
+                        <input type="number" name="" id="inputProductWeight">
+                    </div>
+                    <div class="input-market-container">
+                        <label for="inputPrice">Preço €</label>
+                        <input type="number" name="" id="inputPrice">
+                    </div>
+
+                    
+                </div>
+                <button onclick="submit()">Submeter</button>
+                <button onclick="consult()">Consultar</button>
+                <button onclick="fClear()">Limpar TUDO</button>
+            </form>
+
+        </section>
+        <section class="consult-container">
+            <h2>Banco de dados temporario</h2>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Início Promo</th>
+                            <th>Fim Promo</th>
+                            <th>Mercado</th>
+                            <th>Produto</th>
+                            <th>Unidade Medida</th>
+                            <th>Qnt no pack</th>
+                            <th>Tamanho Produto</th>
+                            <th>Preço</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="dados">
+                        
+
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+    <footer>
+        
+    </footer>
+    
+    <script src="scripts/main.js"></script>
+</body>
+</html>
