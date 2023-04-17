@@ -45,6 +45,7 @@ let todayDate = new Date()
 
 /* Insere os dados no localStorage e mostra na div correspodente*/
 function submit() {
+    console.log('Teste1')
     purchaseId = purchaseId + 1
 
     let dataLine = {
