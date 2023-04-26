@@ -1,0 +1,11 @@
+{
+  "name": "gerir-compras",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/PauloPinto87/gerir-compras",
+  "author": "Paulo Pinto <gomescasador@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
